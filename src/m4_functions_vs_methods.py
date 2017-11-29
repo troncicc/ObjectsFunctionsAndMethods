@@ -84,7 +84,7 @@ def main():
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
     try_methods()
     try_functions()
-
+    try_methods_and_functions()
 
     window.close_on_mouse_click()
 
@@ -164,13 +164,12 @@ def turtle3():
 
 
 def try_methods():
-    ele = rg.SimpleTurtle()
-    ele.pen = rg.Pen('brown', 5)
-    ele.forward(150)
-    ele.left(90)
-    ele.forward(50)
-    ele.backward(100)
-
+    ellie = rg.SimpleTurtle()
+    ellie.pen = rg.Pen('brown', 5)
+    ellie.forward(150)
+    ellie.left(90)
+    ellie.forward(50)
+    ellie.backward(100)
 
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
@@ -222,14 +221,20 @@ def try_methods_and_functions():
     draw_many_squares(elen, 2, 100, 30)
 
     elen.speed = 5
-    elen.pen('red')
+    elen.pen.color = 'red'
 
     draw_many_squares(elen, 10, 50, 15)
 
     elen.speed = 100
-    elen.pen(35)
+    elen.pen.thickness = 35
 
     draw_many_squares(elen, 8, 300, 60)
+
+    elen.pen = rg.Pen('black', 3)
+    elen.backward(200)
+    elen.draw_circle(30)
+    elen.draw_square(50)
+
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
     that is 'blue' with thickness 5.
@@ -262,7 +267,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
