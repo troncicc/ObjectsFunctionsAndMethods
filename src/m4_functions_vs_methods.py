@@ -200,7 +200,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -214,6 +214,22 @@ def try_functions():
 
 
 def try_methods_and_functions():
+    elen = rg.SimpleTurtle()
+    elen.pen = rg.Pen('blue', 5)
+    elen.backward(150)
+    elen.speed = 1
+
+    draw_many_squares(elen, 2, 100, 30)
+
+    elen.speed = 5
+    elen.pen('red')
+
+    draw_many_squares(elen, 10, 50, 15)
+
+    elen.speed = 100
+    elen.pen(35)
+
+    draw_many_squares(elen, 8, 300, 60)
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
     that is 'blue' with thickness 5.
