@@ -137,7 +137,7 @@ def lines():
     line2 = rg.Line(point3, point4)
     line2.attach_to(window)
 
-    line2.thickness = 5
+    line2.thickness = 4
 
     window.render()
 
